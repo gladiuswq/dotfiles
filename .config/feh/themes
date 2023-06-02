@@ -1,0 +1,11 @@
+default_image_view \
+--fontpath '/usr/share/fonts/TTF' \
+--font 'FiraMono-Regular/20' \
+--menu-font 'FiraMono-Regular/18' \
+--geometry 2000x1200 \
+--scale-down \
+--image-bg '#1e1e2e' \
+--cache-thumbnails \
+--zoom-step 10 \
+--scroll-step 50
+
