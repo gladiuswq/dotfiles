@@ -84,6 +84,8 @@ super + x : {j,k}
 super + backslash
 	$SCRIPTS/setbg
 
+# for the actions below screenshots directory must exist
+
 # take screenshot of entire screen and save it (default location is ~/.local/share/screenshots/)
 Print
 	maim $XDG_DATA_HOME/screenshots/$( date +%x_%X ).png
