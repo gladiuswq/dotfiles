@@ -4,5 +4,5 @@ id=$1
 
 state=$(xinput list $id | grep -o disabled)
 
-[ $state ] && xinput enable 10 || xinput disable 10
+[ $state ] && xinput enable $id || xinput disable $id
 
