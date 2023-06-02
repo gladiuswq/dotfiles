@@ -21,6 +21,7 @@ alias cp='cp -iv'
 # extra verbose
 alias mkdir='mkdir -v'
 alias rmdir='rmdir -v'
+alias ln='ln -v'
 
 # use color if possible
 alias grep='grep --color=auto'
