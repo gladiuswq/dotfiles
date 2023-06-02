@@ -1,0 +1,29 @@
+# aliasrc
+
+# for convenient cd
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# image viewer
+alias feh='feh -T default_image_view'
+
+# ls
+alias ls='ls -vh --group-directories-first --color=auto'
+alias la='ls -A'
+alias ll='ls -l'
+alias lla='ls -Al'
+
+# prompt for confirmation
+alias rm='rm -Iv'
+alias mv='mv -iv'
+alias cp='cp -iv'
+
+# extra verbose
+alias mkdir='mkdir -v'
+alias rmdir='rmdir -v'
+
+# use color if possible
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip -color=auto'
+
