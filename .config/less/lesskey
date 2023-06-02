@@ -1,0 +1,8 @@
+# less keybinds
+# this file doesn't completely remove unspecified actions, it simply overrides hotkeys that are set below
+
+#command
+h left-scroll
+l right-scroll
+U clear-search
+
