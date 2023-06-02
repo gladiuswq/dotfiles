@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# set wallpaper
+$SCRIPTS/setbg &
+
+# start compositor
+picom &
+
+# start polybar
+pgrep -x polybar > /dev/null && killall -q polybar
+polybar -q main &
+
+# disable default x-shaped cursor
+xsetroot -cursor_name left_ptr &
+
+# start sxhkd (return is used for aborting chords)
+pgrep -x sxhkd > /dev/null || sxhkd -a Return &
+
+# set delay and repeat speed
+xset r rate 250 40 &
+
