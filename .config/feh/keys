@@ -1,0 +1,47 @@
+# next image
+next_img
+next_img l
+
+# toggle pause
+toggle_pause
+toggle_pause p
+
+# previous image
+prev_img
+prev_img h
+
+# close window and quit feh
+close
+quit
+
+# toggle zoom and viewport keeping
+toggle_keep_vp
+toggle_keep_vp t
+
+# zoom in and out
+zoom_in
+zoom_out
+zoom_in k
+zoom_out j
+
+# save current filelist
+save_filelist
+save_filelist S
+
+# move zoomed image
+scroll_left
+scroll_left H
+scroll_right
+scroll_right L
+scroll_down
+scroll_down J
+scroll_up
+scroll_up K
+
+# remove fullscreen keybind
+toggle_fullscreen
+
+# rebind autozoom hotkey
+jump_random
+toggle_auto_zoom z
+
