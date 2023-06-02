@@ -1,0 +1,11 @@
+#!/bin/bash
+
+hidden=$(bspc query -N -n any.local.leaf.window.hidden)
+
+if [ $hidden ]; then
+	bspc node $hidden -g hidden=off
+	bspc node -f $hidden
+else
+	bspc node -g hidden=on
+fi
+

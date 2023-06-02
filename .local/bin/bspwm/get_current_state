@@ -1,0 +1,13 @@
+#!/bin/bash
+
+target_state=$1
+mode=$2
+
+id=$(bspc query -N -n focused.$target_state)
+
+if ([ $mode = same ] && [ ! $id ]) || ([ $mode = diff ] && [ $id ]); then
+	target_state=\!$target_state
+fi
+
+echo $target_state
+

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+case $1 in
+	h) # shrink horizontally
+		bspc node -z right -25 0
+		bspc node -z left 25 0
+		;;
+	j) # stretch vertically
+		bspc node -z top 0 -25
+		bspc node -z bottom 0 25
+		;;
+	k) # shrink vertically
+		bspc node -z top 0 25
+		bspc node -z bottom 0 -25
+		;;
+	l) # stretch horizontally
+		bspc node -z right 25 0
+		bspc node -z left -25 0
+		;;
+esac
+
