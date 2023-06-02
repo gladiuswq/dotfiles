@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# execute script which contains autostart applications
+. $SCRIPTS/autostart
+
+# set color scheme
+. $XDG_CONFIG_HOME/bspwm/colorscheme
+
+# set rules
+. $XDG_CONFIG_HOME/bspwm/rules
+
+# add workspaces
+bspc monitor -d 1 2 3 4 5
+
+# set gaps
+bspc config window_gap 20
+
+# set border width
+bspc config border_width 2
+
+# ingore first click
+bspc config swallow_first_click true
+
+# configuration for specific desktops
+bspc desktop '^2' -l monocle
+
