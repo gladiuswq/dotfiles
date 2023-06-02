@@ -1,0 +1,110 @@
+# hotkeys
+
+# run terminal
+super + Return
+	$TERMINAL
+
+# run other applications
+super + b ; {h,j,o,t}
+	{$BROWSER,pavucontrol,libreoffice,telegram-desktop}
+
+# close/kill focused node
+super + {_,alt + }u
+	bspc node {-c,-k}
+
+# restart sxhkd/bspwm
+super + {_,shift + }Escape
+	{pkill -USR1 -x sxhkd,bspc wm -r}
+
+# toggle current desktop layout
+super + g
+	bspc desktop focused -l next
+
+# toggle primary states
+super + {i,slash,f,t}
+	bspc node -t \~{floating,pseudo_tiled,fullscreen,tiled}
+
+# toggle additional states
+super + y ; {h,j,l}
+	bspc node -g {private,sticky,locked}
+
+# resize window
+super + r : {h,j,k,l}
+	$SCRIPTS/bspwm/resize {h,j,k,l}
+
+# move window
+super + m : {h,j,k,l}
+	bspc node -v {-50 0,0 50,0 -50,50 0}
+
+# focus/swap nodes in the given direction
+super + {_,alt + }{h,j,k,l}
+	bspc node {-f,-s} {west,south,north,east}.window
+
+# switch to previous/next/last desktop
+super + {comma,period,o}
+	bspc desktop -f {prev,next,last}
+
+# move node to previous/next/last desktop and follow it
+super + alt + {comma,period,o}
+	bspc node -d {prev,next,last} --follow
+
+# switch to specific desktop
+super + {6-9,0}
+	bspc desktop -f \^{1-4,5}
+
+# move node to specific desktop and follow it
+super + alt + {6-9,0}
+	bspc node -d \^{1-4,5} --follow
+
+# make node hidden
+super + n
+	$SCRIPTS/bspwm/hide
+
+# cycle through visible local nodes that have the same state (floating or not) as focused one in specific order
+super + bracket{left,right}
+	bspc node -f {prev,next}.local.window.\!hidden.$( $SCRIPTS/bspwm/get_current_state floating same)
+
+# focus last visible floating/tiled local node
+super + p
+	bspc node -f last.local.window.\!hidden.$( $SCRIPTS/bspwm/get_current_state floating diff)
+
+# swap current non floating node with the biggest local node
+super + semicolon
+	bspc node focused.\!floating -s biggest.local.window
+
+# change borders
+super + z : {j,k}
+	bspc config -d focused border_width $(( $(bspc config -d focused border_width) {-,+} 1 ))
+
+# change gaps
+super + x : {j,k}
+	bspc config -d focused window_gap $(( $(bspc config -d focused window_gap) {-,+} 10 ))
+
+# set random wallpaper
+super + backslash
+	$SCRIPTS/setbg
+
+# take screenshot of entire screen and save it (default location is ~/.local/share/screenshots/)
+Print
+	maim $XDG_DATA_HOME/screenshots/$( date +%x_%X ).png
+
+# take screenshot of specific area/window and save it (default location is ~/.local/share/screenshots/)
+{ctrl + ,shift + }Print
+	maim -s -b 3 -p -3 -c 0.96\,0.88\,0.86 {-D,-t 9999999} $XDG_DATA_HOME/screenshots/$( date +%x_%X ).png
+
+# decrease/increase backlight brightness
+XF86MonBrightness{Down,Up}
+	light {-U,-A} 5
+
+# decrease/increase volume of the default output
+XF86Audio{Lower,Raise}Volume
+	pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
+
+# mute speakers/microphone
+XF86Audio{_,Mic}Mute
+	pactl set-{sink-mute @DEFAULT_SINK@,source-mute @DEFAULT_SOURCE@} toggle
+
+# toggle device with given id (touchpad in my case)
+XF86TouchpadToggle
+	$SCRIPTS/toggle_device 10
+
