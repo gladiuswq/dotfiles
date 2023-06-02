@@ -1,0 +1,57 @@
+# alacritty.yml
+
+import:
+  - ~/.config/alacritty/themes/catppuccin-mocha.yml
+
+window:
+  padding:
+    x: 10
+    y: 8
+  dynamic_title: false
+
+font:
+  normal:
+    family: Fira Mono
+    style: Regular
+  bold:
+    style: Medium
+  italic:
+    style: Medium
+  bold_italic:
+    style: Bold
+  size: 12
+
+draw_bold_text_with_bright_colors: true
+
+cursor:
+  style:
+    shape: Beam
+    blinking: Always
+  vi_mode_style: Block
+  blink_interval: 1000
+  blink_timeout: 0
+  unfocused_hollow: false
+  thickness: 0.075
+
+mouse:
+  hide_when_typing: true
+
+hints:
+  enabled:
+   - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+     hyperlinks: true
+     command: firefox
+     post_processing: true
+     mouse:
+       enabled: true
+       mods: Control|Shift
+     binding:
+       key: U
+       mods: Control|Shift
+
+key_bindings:
+  - { key: K,  mods: Shift|Control,   mode: ~Alt,        action: ScrollLineUp }
+  - { key: J,  mods: Shift|Control,   mode: ~Alt,        action: ScrollLineDown }
+  - { key: H,  mods: Shift|Control,   mode: ~Alt,        action: ScrollHalfPageUp   }
+  - { key: L,  mods: Shift|Control,   mode: ~Alt,        action: ScrollHalfPageDown }
+
