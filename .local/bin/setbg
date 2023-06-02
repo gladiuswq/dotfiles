@@ -1,4 +1,4 @@
 #!/bin/bash
 
-feh --bg-fill --randomize --no-fehbg ~/.local/share/bg
+feh --bg-fill --randomize --no-fehbg $XDG_DATA_HOME/bg
 
