@@ -1,6 +1,0 @@
-# simple zsh prompt
-
-PS1='%B%(?:%F{green}:%F{#e64553})λ%f%b '
-RPS1='%F{#dabefb}%~%f'
-PS2='%B%F{#f5c2e7}λ%f%b '
-

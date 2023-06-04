@@ -1,10 +1,5 @@
 # .zprofile
 
-# !!!
-# to make zsh able to see this directory you need to add the next line to your /etc/zsh/zshenv
-# export ZDOTDIR=$HOME/.config/zsh
-# !!!
-
 # add ~/.local/bin to PATH
 export PATH="$PATH:$HOME/.local/bin"
 
@@ -15,15 +10,17 @@ export SUDO_EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 
-# xdg specification
+# xdg directory specification
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-# x11
+# startx files
 export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+
+# x11 cursor theme
 export XCURSOR_PATH="$XDG_DATA_HOME/icons"
 export XCURSOR_THEME="volantes_cursors"
 
@@ -37,12 +34,6 @@ export MOZ_USE_XINPUT2=1
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 
-# use gtk file dialogs (in telegram)
+# use gtk file dialogs in qt apps (e.g. in telegram)
 export QT_QPA_PLATFORMTHEME=gtk3
-
-# bitwarden data
-export BITWARDENCLI_APPDATA_DIR="$XDG_DATA_HOME/bitwarden"
-
-# gnupg directory
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
