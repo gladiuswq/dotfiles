@@ -1,5 +1,8 @@
 # .zshrc
 
+# source environment variables
+. "$HOME/.config/shell/profile"
+
 # save zsh history
 HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=10000
