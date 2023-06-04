@@ -1,4 +1,4 @@
 #!/bin/bash
 
-feh --bg-fill --randomize --no-fehbg $XDG_DATA_HOME/bg
+feh --bg-fill --randomize --no-fehbg $XDG_DATA_HOME/wallpapers
 
