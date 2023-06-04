@@ -30,7 +30,7 @@ super + y ; {h,j,l}
 
 # resize window
 super + r : {h,j,k,l}
-	$SCRIPTS/resize {h,j,k,l}
+	resize {h,j,k,l}
 
 # move window
 super + m : {h,j,k,l}
@@ -58,15 +58,15 @@ super + alt + {6-9,0}
 
 # make node hidden
 super + n
-	$SCRIPTS/hide
+	hide
 
 # cycle through visible local nodes that have the same state (floating or not) as focused one in specific order
 super + bracket{left,right}
-	bspc node -f {prev,next}.local.window.\!hidden.$( $SCRIPTS/get_current_state floating same)
+	bspc node -f {prev,next}.local.window.\!hidden.$( get_current_state floating same)
 
 # focus last visible floating/tiled local node
 super + p
-	bspc node -f last.local.window.\!hidden.$( $SCRIPTS/get_current_state floating diff)
+	bspc node -f last.local.window.\!hidden.$( get_current_state floating diff)
 
 # swap current non floating node with the biggest local node
 super + semicolon
@@ -82,7 +82,7 @@ super + x : {j,k}
 
 # set random wallpaper
 super + backslash
-	$SCRIPTS/setbg
+	setbg
 
 # for the actions below screenshots directory must exist
 
@@ -108,5 +108,5 @@ XF86Audio{_,Mic}Mute
 
 # toggle device with given id (touchpad in my case)
 XF86TouchpadToggle
-	$SCRIPTS/toggle_device 10
+	toggle_device 10
 

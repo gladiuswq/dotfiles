@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # execute script which contains autostart applications
-. $SCRIPTS/autostart
+. $XDG_CONFIG_HOME/bspwm/autostart
 
 # set color scheme
 . $XDG_CONFIG_HOME/bspwm/colorscheme
