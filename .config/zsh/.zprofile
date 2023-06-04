@@ -40,9 +40,6 @@ export GDK_DPI_SCALE=0.5
 # use gtk file dialogs (in telegram)
 export QT_QPA_PLATFORMTHEME=gtk3
 
-# less keybinds
-export LESSKEYIN="$XDG_CONFIG_HOME/less/lesskey"
-
 # bitwarden data
 export BITWARDENCLI_APPDATA_DIR="$XDG_DATA_HOME/bitwarden"
 
