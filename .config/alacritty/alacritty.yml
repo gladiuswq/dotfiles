@@ -1,7 +1,7 @@
 # alacritty.yml
 
 import:
-  - ~/.config/alacritty/themes/catppuccin-mocha.yml
+  - ~/.config/alacritty/theme.yml
 
 window:
   padding:
