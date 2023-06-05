@@ -16,6 +16,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
+# use custom colorscheme for ls, tree, etc
+export LS_COLORS="$(vivid generate catppuccin-mocha)"
+
 # xinit and startx files
 export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
