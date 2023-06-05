@@ -1,5 +1,3 @@
-# .zshrc
-
 # source environment variables
 . "$HOME/.config/shell/profile"
 

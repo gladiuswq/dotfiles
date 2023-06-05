@@ -1,5 +1,3 @@
-# hotkeys
-
 # run terminal
 super + Return
 	$TERMINAL

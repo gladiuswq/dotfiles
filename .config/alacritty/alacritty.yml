@@ -1,5 +1,3 @@
-# alacritty.yml
-
 import:
   - ~/.config/alacritty/theme.yml
 
