@@ -86,11 +86,11 @@ super + backslash
 
 # take screenshot of entire screen and save it (default location is ~/.local/share/screenshots/)
 Print
-	maim $XDG_DATA_HOME/screenshots/$( date +%x_%X ).png
+	maim $XDG_DATA_HOME/screenshots/$( date +%F_%X ).png
 
 # take screenshot of specific area/window and save it (default location is ~/.local/share/screenshots/)
 {ctrl + ,shift + }Print
-	maim -s -b 3 -p -3 -c 0.96\,0.88\,0.86 {-D,-t 9999999} $XDG_DATA_HOME/screenshots/$( date +%x_%X ).png
+	maim -s -b 3 -p -3 -c 0.96\,0.88\,0.86 {-D,-t 9999999} $XDG_DATA_HOME/screenshots/$( date +%F_%X ).png
 
 # decrease/increase backlight brightness
 XF86MonBrightness{Down,Up}
