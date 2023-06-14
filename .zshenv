@@ -1,5 +1,3 @@
-# .zshenv
-
-# zsh home directory
+# zsh config directory
 export ZDOTDIR=$HOME/.config/zsh
 
