@@ -3,8 +3,8 @@ super + Return
 	$TERMINAL
 
 # run other applications
-super + b ; {h,j,o,t}
-	{$BROWSER,pavucontrol,libreoffice,telegram-desktop}
+super + b ; {h,j,l,o,t}
+	{$BROWSER,pavucontrol,blueman-manager,libreoffice,telegram-desktop}
 
 # close/kill focused node
 super + {_,alt + }u
