@@ -6,4 +6,5 @@ bspc rule -a 'firefox:Navigator' state=tiled follow=true
 bspc rule -a 'Pavucontrol' state=floating
 bspc rule -a 'feh' state=floating
 bspc rule -a 'TelegramDesktop' state=floating sticky=true
+bspc rule -a 'Blueman-manager' state=floating
 
