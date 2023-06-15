@@ -21,6 +21,9 @@ bspc config border_width 2
 # ingore first click
 bspc config swallow_first_click true
 
+# apply window size hints
+bspc config honor_size_hints true
+
 # configuration for specific desktops
 bspc desktop '^2' -l monocle
 
