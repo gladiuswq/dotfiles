@@ -1,0 +1,14 @@
+# pfetchrc
+
+# what lines to show
+PF_INFO="ascii os wm shell pkgs editor palette"
+
+# info names color
+PF_COL1=8
+
+# info data color
+PF_COL2=1
+
+# alignment padding
+PF_ALIGN="7"
+
