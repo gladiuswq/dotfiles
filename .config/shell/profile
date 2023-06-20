@@ -24,6 +24,9 @@ export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 # x11 cursor theme
 export XCURSOR_PATH="$XDG_DATA_HOME/icons"
 
+# pfetch config
+export PF_SOURCE="$XDG_CONFIG_HOME/pfetch/pfetchrc"
+
 # hardware video acceleration (vaapi)
 export LIBVA_DRIVER_NAME=iHD
 
