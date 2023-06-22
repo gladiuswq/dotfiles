@@ -60,11 +60,11 @@ super + n
 
 # cycle through visible local nodes that have the same state (floating or not) as focused one in specific order
 super + bracket{left,right}
-	bspc node -f {prev,next}.local.window.\!hidden.$( getstate floating same)
+	bspc node -f {prev,next}.local.window.\!hidden.$(getstate floating same)
 
 # focus last visible floating/tiled local node
 super + p
-	bspc node -f last.local.window.\!hidden.$( getstate floating diff)
+	bspc node -f last.local.window.\!hidden.$(getstate floating diff)
 
 # swap current non floating node with the biggest local node
 super + semicolon
@@ -72,11 +72,11 @@ super + semicolon
 
 # change borders
 super + z : {j,k}
-	bspc config -d focused border_width $(( $(bspc config -d focused border_width) {-,+} 1 ))
+	bspc config -d focused border_width $(($(bspc config -d focused border_width) {-,+} 1))
 
 # change gaps
 super + x : {j,k}
-	bspc config -d focused window_gap $(( $(bspc config -d focused window_gap) {-,+} 10 ))
+	bspc config -d focused window_gap $(($(bspc config -d focused window_gap) {-,+} 10))
 
 # set random wallpaper
 super + backslash
@@ -86,11 +86,11 @@ super + backslash
 
 # take screenshot of entire screen and save it (default location is ~/.local/share/screenshots/)
 Print
-	maim $XDG_DATA_HOME/screenshots/$( date +%F_%X ).png
+	maim $XDG_DATA_HOME/screenshots/$(date +%F_%X).png
 
 # take screenshot of specific area/window and save it (default location is ~/.local/share/screenshots/)
 {ctrl + ,shift + }Print
-	maim -s -b 3 -p -3 -c 0.96\,0.88\,0.86 {-D,-t 9999999} $XDG_DATA_HOME/screenshots/$( date +%F_%X ).png
+	maim -s -b 3 -p -3 -c 0.96\,0.88\,0.86 {-D,-t 9999999} $XDG_DATA_HOME/screenshots/$(date +%F_%X).png
 
 # decrease/increase backlight brightness
 XF86MonBrightness{Down,Up}
