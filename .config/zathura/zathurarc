@@ -1,0 +1,6 @@
+# start in dark mode by default
+set recolor true
+
+# enable colorscheme
+include themes/catppuccin-mocha
+
